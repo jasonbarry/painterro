@@ -1166,7 +1166,7 @@ class PainterroProc {
   }
 
   getScale() {
-    return this.canvas.getAttribute('width') / this.canvas.offsetWidth;
+    return ((window.devicePixelRatio || 1) * this.canvas.getAttribute('width')) / this.canvas.offsetWidth;
   }
 
   adjustSizeFull() {
